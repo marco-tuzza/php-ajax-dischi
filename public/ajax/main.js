@@ -93,12 +93,13 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+var source = document.getElementById("entry-template").innerHTML;
+var template = Handlebars.compile(source);
 $.ajax({
   url: 'dischi.php',
   type: 'GET',
   success: function success(data) {
     var dataParse = jQuery.parseJSON(data);
-    console.log(dataParse);
 
     for (var i = 0; i < dataParse.length; i++) {
       var author = dataParse[i].author;
@@ -107,6 +108,15 @@ $.ajax({
       var title = dataParse[i].title;
       var year = dataParse[i].year;
       console.log(author, genre, poster, title, year);
+      var context = {
+        "poster": poster,
+        "title": title,
+        "author": author,
+        "genre": genre,
+        "year": year
+      };
+      var html = template(context);
+      $("main").append(html);
     }
   },
   error: function error() {
