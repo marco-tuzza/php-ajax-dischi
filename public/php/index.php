@@ -1,9 +1,5 @@
 <?php 
-
 include "dischi.php";
-
-var_dump ($dischi);
-
 ?>
 
 <!DOCTYPE html>
@@ -15,5 +11,28 @@ var_dump ($dischi);
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <main>
+        <?php  
+        foreach ($dischi as $brano ) {
+            $poster = ($brano["poster"]);
+            $title = ("<span>" . $brano["title"] . "</span>");
+            $author = ("<span>" . $brano["author"] . "</span>");
+            $genre = ("<span>" . $brano["genre"] . "</span>");
+            $year = ("<span>" . $brano["year"] . "</span>");
+        ?>
+        <div class="elemento-brano">
+            <img src="<?php echo $poster ?>" alt="">
+        <?php
+            echo $title;
+            echo $author;
+            echo $genre;
+            echo $year;
+        ?>
+        </div>
+        <?php
+        };
+        ?>
+        </div>
+    </main>
 </body>
 </html>

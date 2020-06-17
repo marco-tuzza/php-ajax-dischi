@@ -1,4 +1,17 @@
-h1 {
-  color: blue;
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .elemento-brano {
+  height: 100%;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+main .elemento-brano img {
+  width: 100%;
+  height: 200px;
 }
 
