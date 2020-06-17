@@ -93,7 +93,26 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+$.ajax({
+  url: 'dischi.php',
+  type: 'GET',
+  success: function success(data) {
+    var dataParse = jQuery.parseJSON(data);
+    console.log(dataParse);
 
+    for (var i = 0; i < dataParse.length; i++) {
+      var author = dataParse[i].author;
+      var genre = dataParse[i].genre;
+      var poster = dataParse[i].poster;
+      var title = dataParse[i].title;
+      var year = dataParse[i].year;
+      console.log(author, genre, poster, title, year);
+    }
+  },
+  error: function error() {
+    alert("Si è verificato un errore");
+  }
+});
 
 /***/ }),
 
