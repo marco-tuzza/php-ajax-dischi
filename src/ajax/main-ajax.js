@@ -41,11 +41,11 @@ $(".dropdown-artist ul li, #dropdown, main, .logo, .user").click(nascondiArtisti
 $(".dropdown ul li, .dropdown-artist ul li").click(leggiValore);
 
 function mostraGeneri () {
-    $(".dropdown").show();
+    $(".dropdown").slideDown();
 };
 
 function nascondiGeneri () {
-    $(".dropdown").hide();
+    $(".dropdown").slideUp();
 };
 
 function mostraArtisti () {

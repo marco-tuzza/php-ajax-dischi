@@ -31,7 +31,7 @@ header {
             color: #ffffff;
             list-style: none;
             display: inline-block;
-            padding: 20px 20px;
+            padding: 15px 20px;
         }
         li:hover {
             cursor: pointer;
@@ -59,6 +59,23 @@ header {
         }
         i:hover {
             cursor: pointer;
+        }
+        .dropdown,.dropdown-artist {
+            background-color: #7d7d7d;
+            width: 200px;
+            position: absolute;
+            top: 55px;
+            left: 50%;
+            transform: translate(-50%);
+            display: none;
+            ul {
+                li{
+                    display: block;
+                }
+                li:hover {
+                    background-color: red;
+                }
+            }
         }
     }
     .user {
