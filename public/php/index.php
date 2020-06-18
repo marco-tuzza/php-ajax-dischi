@@ -23,7 +23,6 @@ include "dischi.php";
                 <li id="dropdown">Generi</li>
                 <li id="search">Cerca</li>
             </ul>
-            <input type="text" name="" value="" placeholder="Cerca">
             <i class="fas fa-search"></i>
         </div>
         <div class="user">

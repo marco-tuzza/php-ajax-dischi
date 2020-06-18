@@ -46,7 +46,7 @@ header .nav li {
   color: #ffffff;
   list-style: none;
   display: inline-block;
-  padding: 20px 20px;
+  padding: 15px 20px;
 }
 
 header .nav li:hover {
@@ -95,6 +95,27 @@ header .nav .fa-search {
 
 header .nav i:hover {
   cursor: pointer;
+}
+
+header .nav .dropdown,
+header .nav .dropdown-artist {
+  background-color: #7d7d7d;
+  width: 200px;
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translate(-50%);
+  display: none;
+}
+
+header .nav .dropdown ul li,
+header .nav .dropdown-artist ul li {
+  display: block;
+}
+
+header .nav .dropdown ul li:hover,
+header .nav .dropdown-artist ul li:hover {
+  background-color: red;
 }
 
 header .user {
